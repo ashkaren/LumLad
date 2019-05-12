@@ -14,7 +14,7 @@
     background-position: center;
     background-size: cover;
 	}
-	.bgimg {background-image: url("https://doc-10-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/lfjc796s1ha3t8s15kek66e16ntss2e1/1555070400000/07170466010893223413/*/1D4dvTDvBuAOAtFjaGpQKD-f-z1Jz8T7t")}
+	.bgimg {background-image: url("https://drive.google.com/uc?id=1D4dvTDvBuAOAtFjaGpQKD-f-z1Jz8T7t")}
 </style>
 <body>
 <div padding = "10px">

@@ -1,18 +1,14 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<body>
 <style>
 	.bgimg{
-    min-height: 70%;
+    min-height: 40%;
     background-position: center;
     background-size: cover;
 	}
 	.bgimg {background-image: url("https://drive.google.com/uc?id=1D4dvTDvBuAOAtFjaGpQKD-f-z1Jz8T7t")}
 </style>
-<script>
-
-</script>
 <!-- Header -->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
@@ -34,32 +30,14 @@
     <li style="width:23%"><a href="receipts.php" class="w3-margin-right w3-round">View Receipts</a></li>
   </ul>
 </div>
-<p>Hi, Welcome to LumberLad's  LumberYard. If you would like to come some wood, please use our simple uploader
-system to upload lumber values and log demensions and let us do the rest!</p>
-<div>
-	<div name="uploadForm" style="border:1px solid black;
-							   ">
-	<form action="uploader.php" method="post" enctype="multipart/form-data">
-    	Select file to upload for Log Demensions:
-		<input type="file" name="fileToUpload" id="fileToUpload">
-
+<body>
+<p>Here you can search for a previous order's receipt.</p>
+<form action="receiptreturn.php" method="post" enctype="multipart/form-data">
+    	Enter in your order number:
+    	<input type="text" name="orderNumber" id="orderNumber" size= 10>
     	<br>
-    	Select file to upload for Lumber Dimensions:
-    	<input type="file" name="fileToUpload2" id="fileToUpload2"><br>
-    	<div align="center">
-    		<input type="submit" value="Upload File" name="submit" >
-   		</div>
-<?php
-include 'connection.php';
-// Create connection
-$conn = new mysqli($host, $user, $password, $db);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-?>
-	</form>
-
-</div>
+    	-Or- Enter your Last Name:
+    	<input type="text" name="lastName" id="lastName"><br>
+    	<input type="submit" value="Lookup Order" name="submit" >
+</form>
 </body></html>
