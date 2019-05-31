@@ -1,7 +1,7 @@
 <?php
-$user = 'id306413_root';
+$user = 'id9793468_root';
 $password = 'root2boot';
-$db = 'id306413_lumberyard2';
+$db = 'id9793468_lumberyard2';
 $host = 'localhost';
 $port = 3306;
 ?>
