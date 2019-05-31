@@ -1,5 +1,7 @@
 <html>
-
+<?php
+error_reporting(0);
+?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -109,7 +111,7 @@ $conn = new mysqli($host, $user, $password, $db);
         echo     "<tr>
               <td>{$row['TYPE']}</td>
               <td>{$row['count']}</td>
-              <td><input type='number' name='{$quan}'></td>
+              <td><input type='number' name='{$quan}'value='0'></td>
               <td>\${$row['price']}</td>
             </tr>";
             $quan++;

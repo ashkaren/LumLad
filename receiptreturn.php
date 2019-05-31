@@ -1,4 +1,7 @@
 <html>
+<?php
+error_reporting(0);
+?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -35,7 +38,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
             <table class="table table-hover">
                 <tr>
-                    <th><a href="?sortby=firstName" type="submit" name="firstName" id="firstName" value="firstName">First Name</a></th>
+                    <th><a href="?sortby=firstName" name="firstName" id="firstName" value="firstName">First Name</a></th>
                     <th><a href="?sortby=lastName" name="sortby" id="lastName" value="lastName">Last Name</a></th>
                     <th><a href="?sortby=Address" name="sortby" id="Address" value="Address">Address</a></th>
                     <th><a href="?sortby=City" name="sortby" id="City" value="City">City</a></th>
@@ -180,7 +183,7 @@
             </table>
             <table class="table table-hover">
                 <tr>
-                    <th><a href="?sortby=orderNumber" type="submit" name="orderNumber" id="orderNumber" value="orderNumber">Ordernumber</a></th>
+                    <th><a href="?sortby=orderNumber" name="orderNumber" id="orderNumber" value="orderNumber">Ordernumber</a></th>
                     <th><a href="?sortby=type" name="type" id="type" value="type">Type</a></th>
                     <th><a href="?sortby=count" name="sortby" id="count" value="count">Count</a></th>
                     <th><a href="?sortby=price" name="sortby" id="price" value="price">Price</a></th>

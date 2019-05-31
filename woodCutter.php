@@ -557,8 +557,8 @@
 
 <div align="center">
 	<p>Please confirm if you would like to authorize the cuts.</p>
-	<input type="submit" name="agree" onclick="document.write('<?php makeCutsTest($lumberTypes,$logs,$conn,$scrapPrice) ?>');" value="yes">
-	<input type="submit" value="no">
+	<input type="submit" name="agree" onclick="document.write('<?php makeCutsTest($lumberTypes,$logs,$conn,$scrapPrice) ?>'); window.location='viewInventory.php';" value="yes">
+	<input type="submit" onclick="window.location='index.html';" value="no">
 </div>
 <script>
 

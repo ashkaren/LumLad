@@ -1,4 +1,7 @@
 <html>
+<?php
+error_reporting(0);
+?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -629,34 +632,7 @@ echo "You ordered {$_POST['18']} {$row['TYPE']}. There are $remaining {$row['TYP
     echo "You tried to order {$_POST['18']} {$row['TYPE']}, but there were only {$row['count']} {$row['TYPE']} left in stock. We will give you {$row['count']}. <br>";
 }
 //========================================================================
-$result = ("SELECT count, TYPE, price FROM inventory LIMIT 19,20");
-$query = $conn -> query($result);
-$row = mysqli_fetch_assoc($query);
 
-$remaining = $row['count'] - $_POST['19'];
-
-if ($_POST['19'] >= 1 && $remaining >= 0) {
-  $total = ($_POST['19'] * $row['price']);
-
-  $update = "UPDATE inventory SET count=$remaining WHERE TYPE='{$row['TYPE']}'";
-  $success = $conn -> query($update);
-
-  $inventoryreceipt = "INSERT INTO inventoryreceipts (orderNumber, type, count, price, total) VAlUES ('$orderNumber', '{$row['TYPE']}', '{$_POST['19']}', '{$row['price']}', '$total' )";
-  $insert = $conn -> query($inventoryreceipt) or die("Could not process query: " . mysql_error());
-echo "You ordered {$_POST['19']} {$row['TYPE']}. There are $remaining {$row['TYPE']} left in stock. <br>";
-}
-
-  else if ($_POST['19'] >= 1 && $remaining < 0) {
-    $total = ($row['count'] * $row['price']);
-
-    $update = "UPDATE inventory SET count=0 WHERE TYPE='{$row['TYPE']}'";
-    $setZero= $conn -> query($update);
-
-    $inventoryreceipt = "INSERT INTO inventoryreceipts (orderNumber, type, count, price, total) VAlUES ('$orderNumber', '{$row['TYPE']}', '{$row['count']}', '{$row['price']}', '$total' )";
-    $insert = $conn -> query($inventoryreceipt) or die("Could not process query: " . mysql_error());
-
-    echo "You tried to order {$_POST['19']} {$row['TYPE']}, but there were only {$row['count']} {$row['TYPE']} left in stock. We will give you {$row['count']}. <br>";
-}
 
 $receipt = "INSERT INTO receipts (orderNumber, firstName, lastName, Address, City, State, Zip_Code) VALUES ('$orderNumber', '{$_POST['firstName']}', '{$_POST['lastName']}', '{$_POST['Address']}', '{$_POST['City']}', '{$State}', '{$_POST['Zip']}')";
 $success = $conn -> query($receipt) or die("Could not process query: " . mysql_error());
